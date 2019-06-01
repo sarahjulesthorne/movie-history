@@ -1,0 +1,44 @@
+{
+  "userMovie1": {
+"uid": "sl507",
+"movieId": "movie1",
+"isWatched": false,
+"rating": 0
+  },
+  "userMovie2": {
+    "uid": "sl507",
+    "movieId": "movie2",
+    "isWatched": false,
+    "rating": 0
+      },
+      "userMovie3": {
+        "uid": "sl507",
+        "movieId": "movie3",
+        "isWatched": true,
+        "rating": 5
+          },
+          "userMovie4": {
+            "uid": "u50129734",
+            "movieId": "movie1",
+            "isWatched": true,
+            "rating": 5
+              },
+              "userMovie5": {
+                "uid": "u50129734",
+                "movieId": "movie1",
+                "isWatched": false,
+                "rating": 0
+                  },
+                  "userMovie6": {
+                    "uid": "p23129734",
+                    "movieId": "movie5",
+                    "isWatched": true,
+                    "rating": 5
+                      },
+                      "userMovie7": {
+                        "uid": "p23129734",
+                        "movieId": "movie5",
+                        "isWatched": false,
+                        "rating": 0
+                          }
+}
