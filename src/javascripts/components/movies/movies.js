@@ -1,10 +1,14 @@
-import util from '../../helpers/utils';
+import domStringBuilders from '../../helpers/dom-string-builders';
+import moviesData from '../../helpers/data/movies-data';
 
-const moviesStringBuilder = () => {
-  const domString = '<h1>Hi! I\'m the Movies Div < /h1>';
-  util.printToDom('movies', domString);
+const allMovieBuilder = () => {
+  moviesData.getMoviesArray()
+    .then((movies) => {
+      domStringBuilders.moviesStringBuilder(movies);
+    })
+    .catch(error => console.error('could not get movies array', error));
 };
 
 export default {
-  moviesStringBuilder,
+  allMovieBuilder,
 };
