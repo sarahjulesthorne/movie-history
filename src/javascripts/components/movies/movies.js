@@ -8,15 +8,19 @@ const currentUser = firebase.auth().currentUser.uid;
 
 const addToWatchlist = (e) => {
   e.preventDefault();
-  const currentMovieId = e.target.id.split('.')[1];
-  const newUserMovie = {
-    uid: currentUser,
-    movieId: currentMovieId,
-    rating: e.target.closest('.rating-text').id.split('.')[1],
-    isWatched: false,
-  };
-  console.error(newUserMovie);
-  userMoviesData.getUserMoviesByUid(currentUser);
+  // const currentMovieId = e.target.id.split('.')[1];
+  // const newUserMovie = {
+  //   uid: currentUser,
+  //   movieId: currentMovieId,
+  //   rating: e.target.closest('.rating-text').id.split('.')[1],
+  //   isWatched: false,
+  // };
+  // console.error(newUserMovie);
+  userMoviesData.getUserMoviesByUid(currentUser)
+    .then((userMovies) => {
+      console.error(userMovies);
+    })
+    .catch(error => console.error('could not get user movies array', error));
 };
 
 const movieButtonListeners = () => {
