@@ -10,10 +10,16 @@ const moviesStringBuilder = (arrayToPrint) => {
     domString += '<div class="card-body">';
     domString += `<h4 class="card-title">${movie.title}</h4>`;
     domString += `<p class="card-text text-center" id="mpaa.${movie.id}">MPAA Rating: ${movie.movieRating}</p>`;
-    domString += '<p class="card-text w-50">Not Rated</p>';
-    domString += `<button id="rating.${movie.id}" class="btn btn-secondary w-50 rate-btn">Rate Movie</button>`;
-    domString += '<p class="card-text w-50">Not Watchlisted</p>';
-    domString += `<button id="watchlist.${movie.id}" class="btn btn-secondary w-50 watchlist-btn">Add To Watchlist</button>`;
+    if (movie.rating === 0) {
+      domString += `<p class="card-text w-50 rating-text" id="${movie.id}.${movie.rating}">Not Rated</p>`;
+      domString += `<button id="rating.${movie.id}" class="btn btn-secondary w-50 rate-btn">Rate Movie</button>`;
+    }
+    if (movie.isWatched === true) {
+      domString += `<p class="card-text w-50 watchlist-text" id="${movie.id}.${movie.rating}">Not Watchlisted</p>`;
+      domString += `<button id="watchlist.${movie.id}" class="btn btn-secondary w-50 watchlist-btn">Add To Watchlist</button>`;
+    } else {
+      domString += `<h6 class="card-text w-100 watchlist-text" id="${movie.id}.${movie.rating}">On My Watchlist</h6>`;
+    }
     domString += '</div>';
     domString += '</div>';
     domString += '</div>';
