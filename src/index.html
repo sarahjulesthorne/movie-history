@@ -38,10 +38,37 @@
 
     <div id="authentication"></div>
     <div id="movies" class="hide"></div>
-<div id="addMovie"></div>
-<div id="allMovies"></div>
-<div id="watchlistMovies"></div>
+    <div id="addMovie"></div>
+    <div id="allMovies"></div>
+    <div id="watchlistMovies"></div>
   </div>
+  <!-- End of movies divs -->
+
+  <!-- Start of form for entering new movies into database -->
+  <div id="newMovies" class="hide">
+    <form id="newMoviesForm">
+      <h2 class="form-title w-100 text-center">Add Your New Movie</h2>
+      <div class="form-group">
+        <label for="movieTitleInput">Enter Movie Title</label>
+        <input type="text" class="form-control" id="movieTitleInput" placeholder="My Chosen Movie">
+      </div>
+      <div class="form-group">
+        <label for="mpaaRatingInput">Enter MPAA Rating</label>
+        <input type="text" class="form-control" id="mpaaRatingInput" placeholder="PG25">
+      </div>
+      <div class="form-group">
+        <label for="imageUrlInput">Enter Image URL</label>
+        <input type="text" class="form-control" id="imageUrlInput"
+          placeholder="https://www.google.com/picture-of-rainbow.jpg">
+      </div>
+      <div class="form-group">
+        <label for="imageDescriptionInput">Required: Enter image description</label>
+        <input type="text" class="form-control" id="imageDescriptionInput" placeholder="Picture of a beautiful rainbow">
+      </div>
+      <button type="submit" id="submitMovieBtn" class="btn btn-primary">Add Movie</button>
+    </form>
+  </div>
+  <!-- End of new movie submission form -->
 
 </body>
 
