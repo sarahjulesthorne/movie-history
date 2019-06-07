@@ -8,10 +8,11 @@ const getUserMoviesByUid = userId => new Promise((resolve, reject) => {
     .then((response) => {
       const userMovieArray = response.data;
       const userMovies = [];
-      Object.keys(userMovieArray).forEach((umId) => {
-        userMovieArray[umId].id = umId;
-        userMovies.push(userMovieArray[umId]);
+      Object.keys(userMovieArray).forEach((userMovieId) => {
+        userMovieArray[userMovieId].id = userMovieId;
+        userMovies.push(userMovieArray[userMovieId]);
       });
+      console.error(userMovies);
       resolve(userMovies);
     })
     .catch(error => reject(error));

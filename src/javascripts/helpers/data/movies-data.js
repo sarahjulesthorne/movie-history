@@ -11,7 +11,7 @@ const getMoviesArray = () => new Promise((resolve, reject) => {
       Object.keys(movieObject).forEach((movieId) => {
         movieObject[movieId].id = movieId;
         movieObject[movieId].rating = 0;
-        movieObject[movieId].isWatched = false;
+        movieObject[movieId].isWatched = true;
         movies.push(movieObject[movieId]);
       });
       resolve(movies);

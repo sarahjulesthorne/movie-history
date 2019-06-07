@@ -11,14 +11,6 @@ const navBarEvents = () => {
       }
     });
   });
-  console.error('test');
-  // for (let i = 0; i < navLinks.length; i + 1) {
-  //   navLinks[i].addEventListener('click', (e) => {
-  //     if (e.target.id === 'navbarLogout') {
-  //       firebase.auth().signOut();
-  //     }
-  //   });
-  // }
 };
 
 export default {

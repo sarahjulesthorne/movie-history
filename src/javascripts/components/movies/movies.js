@@ -4,21 +4,21 @@ import domStringBuilders from '../../helpers/dom-string-builders';
 import moviesData from '../../helpers/data/movies-data';
 import userMoviesData from '../../helpers/data/user-movies-data';
 
-const currentUser = firebase.auth().currentUser.uid;
+// const selectedCurrentUser = firebase.auth().currentUser.uid;
 
 const addToWatchlist = (e) => {
   e.preventDefault();
-  // const currentMovieId = e.target.id.split('.')[1];
-  // const newUserMovie = {
-  //   uid: currentUser,
-  //   movieId: currentMovieId,
-  //   rating: e.target.closest('.rating-text').id.split('.')[1],
-  //   isWatched: false,
-  // };
-  // console.error(newUserMovie);
-  userMoviesData.getUserMoviesByUid(currentUser)
+  const currentMovieId = e.target.id.split('.')[1];
+  const newUserMovie = {
+    uid: firebase.auth().currentUser.uid,
+    movieId: currentMovieId,
+    rating: 0,
+    isWatched: false,
+  };
+  
+  userMoviesData.getUserMoviesByUid(firebase.auth().currentUser.uid)
     .then((userMovies) => {
-      console.error(userMovies);
+      
     })
     .catch(error => console.error('could not get user movies array', error));
 };
@@ -33,6 +33,7 @@ const movieButtonListeners = () => {
 const allMovieBuilder = () => {
   moviesData.getMoviesArray()
     .then((movies) => {
+      console.error(movies);
       domStringBuilders.moviesStringBuilder(movies);
       movieButtonListeners();
     })
