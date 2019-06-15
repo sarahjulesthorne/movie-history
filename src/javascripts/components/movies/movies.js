@@ -21,7 +21,7 @@ const addToWatchlist = (e) => {
       const matchingMovie = userMovies.find(u => u.movieId === currentMovieId);
       if (matchingMovie) {
         newUserMovie.rating = 5;
-        userMoviesData.editUserMovie(currentMovieId, newUserMovie)
+        userMoviesData.editUserMovie(matchingMovie.id, newUserMovie)
           .then(() => {
             allMovieBuilder(); // eslint-disable-line no-use-before-define
           })
