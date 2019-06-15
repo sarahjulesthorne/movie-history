@@ -2,19 +2,19 @@
   "userMovie1": {
 "uid": "SeJuelNoxtbf3LEHs0SUHUJSj9x1",
 "movieId": "movie1",
-"isWatched": false,
+"isWatched": true,
 "rating": 0
   },
   "userMovie2": {
     "uid": "SeJuelNoxtbf3LEHs0SUHUJSj9x1",
     "movieId": "movie2",
-    "isWatched": false,
+    "isWatched": true,
     "rating": 0
       },
       "userMovie3": {
         "uid": "SeJuelNoxtbf3LEHs0SUHUJSj9x1",
         "movieId": "movie3",
-        "isWatched": true,
+        "isWatched": false,
         "rating": 5
           },
           "userMovie4": {
