@@ -3,18 +3,18 @@
 "uid": "SeJuelNoxtbf3LEHs0SUHUJSj9x1",
 "movieId": "movie1",
 "isWatched": true,
-"rating": 0
+"rating": 5
   },
   "userMovie2": {
     "uid": "SeJuelNoxtbf3LEHs0SUHUJSj9x1",
     "movieId": "movie2",
-    "isWatched": true,
+    "isWatched": false,
     "rating": 0
       },
       "userMovie3": {
         "uid": "SeJuelNoxtbf3LEHs0SUHUJSj9x1",
         "movieId": "movie3",
-        "isWatched": false,
+        "isWatched": true,
         "rating": 5
           },
           "userMovie4": {
@@ -25,19 +25,19 @@
               },
               "userMovie5": {
                 "uid": "u50129734",
-                "movieId": "movie1",
-                "isWatched": false,
+                "movieId": "movie4",
+                "isWatched": true,
                 "rating": 0
                   },
                   "userMovie6": {
                     "uid": "p23129734",
                     "movieId": "movie5",
                     "isWatched": true,
-                    "rating": 5
+                    "rating": 0
                       },
                       "userMovie7": {
                         "uid": "p23129734",
-                        "movieId": "movie5",
+                        "movieId": "movie3",
                         "isWatched": false,
                         "rating": 0
                           }

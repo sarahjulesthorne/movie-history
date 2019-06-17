@@ -22,8 +22,11 @@ const editUserMovie = (movieId, movieObject) => axios.put(`${firebaseUrl}/userMo
 
 const addUserMovie = movieObject => axios.post(`${firebaseUrl}/userMovie.json`, movieObject);
 
+const deleteMovie = movieId => axios.delete(`${firebaseUrl}/userMovie/${movieId}.json`);
+
 export default {
   getUserMoviesByUid,
   editUserMovie,
   addUserMovie,
+  deleteMovie,
 };
